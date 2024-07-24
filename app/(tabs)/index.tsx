@@ -13,6 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import useCartStore from "@/store/cartStore";
 
 const TabOneScreen = () => {
+  // get action define in store zustand
   const { addProduct, removeProduct } = useCartStore();
 
   const RenderItem: ListRenderItem<any> = ({ item }) => {
@@ -26,6 +27,7 @@ const TabOneScreen = () => {
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={{ padding: 10 }}
+            //calling action
             onPress={() => removeProduct(item)}
           >
             <Ionicons name="remove" size={20} color={"#000"} />

@@ -14,6 +14,7 @@ import useCartStore from "@/store/cartStore";
 import { Product } from "@/store/interface";
 
 const TabTwoScreen = () => {
+  //get define action zustand
   const { addProduct, removeProduct, products } = useCartStore();
 
   const RenderItem: ListRenderItem<Product & { quantity: number }> = ({
